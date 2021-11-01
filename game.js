@@ -13,14 +13,14 @@ class Game {
 
 	preload() {
 		this.backgroundImages = [
-			{ src: loadImage('assets/galaxy.jpeg'), x: 0, speed: 3 },
+			{ src: loadImage('assets/galaxy.jpeg'), x: 0, speed: 2 },
 			//{ src: loadImage('assets/background/plx-2.png'), x: 0, speed: 1 },
 			//{ src: loadImage('assets/background/plx-3.png'), x: 0, speed: 2 },
 			//{ src: loadImage('assets/background/plx-4.png'), x: 0, speed: 3 },
 			//{ src: loadImage('assets/background/plx-5.png'), x: 0, speed: 4 }
 		]
 		this.playerImage = loadImage('assets/starman.png')
-		this.coinImage = loadImage('assets/doge.png')
+		this.coinImage = loadImage('assets/doge2.png')
 	}
 
 	draw() {
