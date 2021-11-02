@@ -4,10 +4,10 @@ class Player {
 		this.score = 0;
 		this.velocity = 0;
 		this.gravity = 0.2;
-		this.width = 100;
-		this.height = 140;
-		this.x = 0;
-		this.y = height - this.height;
+		this.width = 150;
+		this.height = 70;
+		this.x = 30;
+		this.y = height - this.height -300;
 	}
 
 	draw() {
@@ -25,7 +25,8 @@ class Player {
 
 	jump() {
 		console.log('jump 🚁')
-		this.velocity = - 10
+		this.velocity = - 5
 
 	}
+	
 }

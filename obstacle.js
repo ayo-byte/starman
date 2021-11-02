@@ -3,8 +3,8 @@ class Obstacle {
 		this.image = image
 		this.x = width
 		this.y = (Math.random() * height) / 1
-		this.width = 50
-		this.height = 50
+		this.width = 40
+		this.height = 45
 	}
 
 	collision(playerInfo) {

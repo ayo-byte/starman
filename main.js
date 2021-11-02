@@ -8,11 +8,20 @@ function setup() {
 	game.setup()
 }
 function draw() {
-	game.draw()
+	game.draw();
+	//keyPressed();
+	//totalTime = millies();
 }
 function keyPressed() {
-	if (keyCode === 32) {
+	if (keyCode === 38) {
 		// make the player jump
 		game.player.jump()
-	}
+	} //else if (keyCode === 40{
+		//game.player.down()
+		
+	//}
 }
+
+//Counters
+//let score = 0;
+//let totalTime;
