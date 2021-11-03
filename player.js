@@ -3,7 +3,7 @@ class Player {
 	constructor() {
 		this.score = 0;
 		this.velocity = 0;
-		this.gravity = 0.2;
+		//this.gravity = 0.2;
 		this.width = 150;
 		this.height = 70;
 		this.x = 30;
@@ -12,7 +12,7 @@ class Player {
 
 	draw() {
 		// this pushes the player down
-		this.velocity += this.gravity
+		//this.velocity += this.gravity
 		this.y += this.velocity
 		// if bb8 moves lower than the bottom of the canvas we need to correct
 		// his position
@@ -25,8 +25,9 @@ class Player {
 
 	jump() {
 		console.log('jump 🚁')
-		this.velocity = - 5
-
+		this.velocity = - 1.4
 	}
-	
+	moveDown(){
+		this.velocity = 1.4
+	}
 }

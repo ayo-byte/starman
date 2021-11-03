@@ -1,7 +1,9 @@
 
 
 class Background {
+	
 	draw() {
+
 		console.log('this is the background drawing')
 		// image(game.backgroundImages[0].src, 0, 0, width, height)
 		// image(game.backgroundImages[1].src, 0, 0, width, height)
@@ -20,5 +22,7 @@ class Background {
 				img.x = 0
 			}
 		})
+		image(game.cloudImage, -100, 0, width, height)
+
 	}
 }
