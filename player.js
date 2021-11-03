@@ -24,7 +24,7 @@ class Player {
 	}
 
 	jump() {
-		console.log('jump 🚁')
+		//console.log('jump 🚁')
 		this.velocity = - 1.4
 	}
 	moveDown(){

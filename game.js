@@ -3,8 +3,9 @@ class Game {
 	setup() {
 		this.player = new Player()
 		this.background = new Background()
-        this.timer = new Timer(5000, true)
 		this.obstacles = []
+        this.timer = new Timer()
+
 
 	}
 
@@ -31,7 +32,7 @@ class Game {
 	draw() {
 		// console.log('game drawing')
 		//clear()
-        
+
 		this.background.draw()
 		this.player.draw()
         this.timer.draw()
@@ -64,5 +65,4 @@ class Game {
 
 }
 
-//timer 
-//Text(totalTime, 700, 50);
+
