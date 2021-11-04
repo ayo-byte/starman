@@ -4,6 +4,8 @@ let score = 0;
 let coins = 0;
 let startTime = 0;
 let level = 1;
+let coinSound;
+let gameoverSound;
 
 let bestscore = 0;
 let bestscoreElement = document.querySelector("#score")

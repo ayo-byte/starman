@@ -27,6 +27,9 @@ class Game {
 		this.playerImage = loadImage('assets/starman.png')
 		this.coinImage = loadImage('assets/doge2.png')
         this.bezosImage = loadImage('assets/pngwing.com.png')
+        //soundFormats('mp3', 'ogg');
+        coinSound = loadSound('assets/mario.mp3');
+        gameoverSound = loadSound('assets/gameover.mp3');
 	}
 
 	draw() {

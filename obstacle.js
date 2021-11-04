@@ -23,6 +23,7 @@ class Obstacle {
 			return false
 		} else {
 			mode = -1;
+			gameoverSound.play();
 			return true 
 		}
 	}
@@ -77,7 +78,7 @@ class Coin {
 			
 			coins += 1 //Timer.millisecond() +1000
 			//console.log(typeof score, score)
-
+			coinSound.play()
 			return true
 		}
 			
