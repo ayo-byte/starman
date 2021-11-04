@@ -32,7 +32,6 @@ class Game {
 	draw() {
 		// console.log('game drawing')
 		//clear()
-
 		this.background.draw()
 		this.player.draw()
         this.timer.draw()

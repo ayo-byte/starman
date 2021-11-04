@@ -5,6 +5,8 @@ class Obstacle {
 		this.y = (Math.random() * height) / 1.75
 		this.width = 200
 		this.height = 250
+		this.direction = 1
+		//this.velocity = 0
 	}
 
 	collision(playerInfo) {
@@ -26,9 +28,24 @@ class Obstacle {
 	}
 
 	draw() {
+		//this.y += this.velocity
+
 		this.x--
+		if (this.y >= height){
+			this.direction = -1
+		}
+		if (this.y <= 0){
+			this.direction = +1
+		}
+		if (this.direction === -1){
+			this.y--
+		}
+		if (this.direction === +1){
+			this.y++
+		}
 		image(this.image, this.x, this.y, this.width, this.height)
 	}
+	
 }
 
 class Coin {
@@ -67,7 +84,7 @@ class Coin {
 	}
 
 	draw() {
-		this.x--
+		this.x-- 
 		image(this.image, this.x, this.y, this.width, this.height)
 	}
 }

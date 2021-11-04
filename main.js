@@ -3,6 +3,10 @@ let mode = 0;
 let score = 0;
 let coins = 0;
 let startTime = 0;
+let level = 1;
+
+let bestscore = 0;
+let bestscoreElement = document.querySelector("#score")
 
 function preload() {
 	game.preload()
@@ -23,9 +27,13 @@ function draw() {
 		game.draw();
 	}
 	if (mode === -1){
-		text("GAME OVER\nScore: " + score.toFixed(0), 160, 225)
+		text("GAME OVER\nScore: " + score.toFixed(0) + "\nPRESS SPACE TO RESTART", 160, 225)
 		fill(255)
 		textSize(40)
+		if (score > bestscore) {
+			bestscore = score;
+			bestscoreElement.innerHTML = bestscore.toFixed(0) 
+		}
 	} 	
 }
 
@@ -33,6 +41,7 @@ function keyPressed() {
 	if (keyCode === 32){
 		mode = 1
 		startTime = millis()
+		coins = 0;
 
 		//console.log(mode)
 	}
@@ -49,10 +58,6 @@ function keyPressed() {
 //TODO
 //coins and obstacles dont collide
 //add score via DOM 
-//add coins to score
-//define losing (giant bezos head that needs to be avoided or rocket with bezos face?)
-//add start button
-//game over screen
 //EXTRAS
 //GIF of player with fire
 //score counter (best score)

@@ -6,8 +6,8 @@ class Player {
 		//this.gravity = 0.2;
 		this.width = 150;
 		this.height = 70;
-		this.x = 30;
-		this.y = height - this.height -300;
+		this.x = 20;
+		this.y = height /2 ;
 	}
 
 	draw() {
@@ -20,11 +20,14 @@ class Player {
 			// reset to his starting position
 			this.y = height - this.height;
 		}
+		if (this.y <= 0) {
+			// reset to his starting position
+			this.y = 0;
+		}
 		image(game.playerImage, this.x, this.y, this.width, this.height)
 	}
 
 	jump() {
-		//console.log('jump 🚁')
 		this.velocity = - 1.4
 	}
 	moveDown(){
