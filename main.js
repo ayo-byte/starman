@@ -21,20 +21,25 @@ function setup() {
 function draw() {
 	clear();
 	if (mode === 0){
-		text("PRESS SPACE TO GO TO SPACE", 160, 225)
+		text("PRESS SPACE TO GO TO SPACE", 130, 225)
 		fill(255)
-		textSize(40)
+		textSize(35)
+		document.getElementById("select-level").style.display = "block"
+
 	} 
 	if (mode === 1){
 		game.draw();
+		document.getElementById("select-level").style.display = "none"
+
 	}
 	if (mode === -1){
-		text("GAME OVER\nScore: " + score.toFixed(0) + "\nPRESS SPACE TO RESTART", 160, 225)
+		text("GAME OVER\nScore: " + score.toFixed(0) + "\nPRESS SPACE TO RESTART", 150, 225)
 		fill(255)
-		textSize(40)
+		textSize(35)
+		document.getElementById("select-level").style.display = "block"
 		if (score > bestscore) {
 			bestscore = score;
-			bestscoreElement.innerHTML = bestscore.toFixed(0) 
+			bestscoreElement.innerHTML = " " + bestscore.toFixed(0) 
 		}
 	} 	
 }
@@ -44,8 +49,8 @@ function keyPressed() {
 		mode = 1
 		startTime = millis()
 		coins = 0;
-
-		//console.log(mode)
+		level = document.getElementById("level").value
+		console.log("level is ,", level)
 	}
 	else if (keyCode === 38) {
 		// make the player jump

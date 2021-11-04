@@ -6,7 +6,8 @@ class Obstacle {
 		this.width = 200
 		this.height = 250
 		this.direction = 1
-		//this.velocity = 0
+		this.velocity = level*1
+
 	}
 
 	collision(playerInfo) {
@@ -39,10 +40,10 @@ class Obstacle {
 			this.direction = +1
 		}
 		if (this.direction === -1){
-			this.y--
+			this.y = this.y-this.velocity
 		}
 		if (this.direction === +1){
-			this.y++
+			this.y = this.y+this.velocity
 		}
 		image(this.image, this.x, this.y, this.width, this.height)
 	}
