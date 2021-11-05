@@ -21,7 +21,7 @@ function setup() {
 function draw() {
 	clear();
 	if (mode === 0){
-		text("PRESS SPACE TO GO TO SPACE", 130, 225)
+		text("PRESS SPACE TO GO TO SPACE\nUSE THE UP AND DOWN ARROWS\nTO NAVIGATE", 130, 225)
 		fill(255)
 		textSize(35)
 		document.getElementById("select-level").style.display = "block"
